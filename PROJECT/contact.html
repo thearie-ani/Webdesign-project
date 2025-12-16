@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Contact Us</title>
+</head>
+
+<body class="bg-[#faf7f2]">
+
+<header class="w-full bg-white shadow-sm">
+  <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+ 
+    <nav class="w-full bg-white shadow-sm p-4 flex items-center justify-between">
+
+    <a href="home.html" class="flex items-center gap-2">
+  <img src="image2/image3.png" class="w-8">
+  <span class="font-bold text-2xl tracking-wide text-[#4b2e2e]">
+    Read~Zone
+  </span>
+</a>
+
+
+    <div class="relative w-80">
+        <span class="absolute left-3 top-1/2 transform -translate-y-1/2">
+            <img src="https://img.icons8.com/ios-filled/50/search.png" class="w-4 opacity-60">
+        </span>
+
+        <input type="text" placeholder="Search Book"
+            class="w-full pl-10 pr-3 py-2 bg-gray-100 rounded-xl outline-none">
+    </div>
+
+    <div class="flex items-center gap-4">
+    <a href="signin.html" class="text-sm mr-2">Sign In</a>
+
+    <a href="basket.html" 
+        class="flex items-center gap-2 px-3 py-2 bg-gray-100 border rounded-lg hover:bg-gray-400">
+        <span class="text-sm font-medium">Basket</span>
+        <img src="image2/image4.png" class="w-5">
+    </a>
+</div>
+    </div>
+  </div>
+
+  <div class="flex justify-center gap-10 text-sm py-3 bg-white">
+    <a href="home.html" class="hover:text-yellow-600">Home</a>
+    <a href="book.html" class="hover:text-yellow-600">Book</a>
+    <a href="event.html" class="hover:text-yellow-600">Events</a>
+    <a href="aboutus.html" class="hover:text-yellow-600">About Us</a>
+    <a href="contact.html" class="font-bold text-black">Contact</a>
+</div>
+
+</header>
+
+<section class="max-w-5xl mx-auto mt-10 bg-[#f7f0e6] rounded-xl shadow-md p-12">
+
+  <h1 class="text-center text-3xl font-semibold mb-4">Contact Us</h1>
+
+  <p class="text-center text-gray-700 max-w-2xl mx-auto mb-10">
+    Whether you have questions, need book recommendations,  
+    want to check availability, or need help with your order—
+    our team is here to assist you.
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    <form class="md:col-span-2 space-y-6">
+
+      <div>
+        <label class="font-medium">Name</label>
+        <div class="grid grid-cols-2 gap-4 mt-2">
+          <input type="text" placeholder="First" class="border p-2 rounded-md bg-gray-200" />
+          <input type="text" placeholder="Last" class="border p-2 rounded-md bg-gray-200" />
+        </div>
+      </div>
+
+      <div>
+        <label class="font-medium">Email</label>
+        <input 
+          type="text" 
+          placeholder="example@gmail.com"
+          class="border p-2 rounded-md bg-gray-200 w-full mt-2" />
+      </div>
+
+      <div>
+        <label class="font-medium">Phone number (optional)</label>
+        <input 
+          type="text" 
+          placeholder="XXX-XXX-XXXX"
+          class="border p-2 rounded-md bg-gray-200 w-full mt-2" />
+      </div>
+
+      <div>
+        <label class="font-medium">Message</label>
+        <textarea 
+          placeholder="Type your message...." 
+          class="border p-2 rounded-md bg-gray-200 w-full h-28 mt-2"></textarea>
+      </div>
+
+      <div class="flex justify-center mt-6">
+            <button class="bg-blue-700 text-white px-10 py-3 rounded-md hover:bg-blue-900">
+                Submit
+            </button>
+        </div>
+
+    </form>
+
+    <div class="flex justify-center items-start">
+      <img src="image2/image5.png" 
+        class="w-64">
+    </div>
+
+  </div>
+</section>
+
+<footer class="w-full mt-20 bg-white py-12 border-t">
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-sm text-gray-700 px-6">
+
+        <div>
+            <h3 class="font-semibold mb-2">Shop With Us</h3>
+            <ul class="space-y-1">
+                <li><a href="#" class="text-blue-500 hover:underline">Buy Book</a></li>
+                <li><a href="cart.html" class="text-blue-500 hover:underline">Your Profile</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 class="font-semibold mb-2">Contact Us</h3>
+            <ul class="space-y-1">
+                <li><a href="contact.html" class="text-blue-500 hover:underline">contact us</a></li>
+                <li><a href="#" class="text-blue-500 hover:underline">location</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 class="font-semibold mb-2">Follow Us</h3>
+            <div class="flex items-center gap-4 mt-2">
+                <img src="https://img.icons8.com/ios-filled/50/tiktok--v1.png" class="w-5">
+                <img src="https://img.icons8.com/ios-filled/50/facebook--v1.png" class="w-5">
+                <img src="https://img.icons8.com/ios-filled/50/instagram-new.png" class="w-5">
+                <img src="https://img.icons8.com/ios-filled/50/youtube-play.png" class="w-5">
+            </div>
+        </div>
+
+        <div>
+            <h3 class="font-semibold mb-2">Trade on good with <span class="text-blue-500">readzone-app</span></h3>
+            <div class="mt-3 flex gap-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                     class="w-28">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                     class="w-24">
+            </div>
+        </div>
+    </div>
+
+    <p class="text-center text-xs text-gray-500 mt-10">© 2025 readzone.store</p>
+</footer>
+</body>
+</html>

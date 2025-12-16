@@ -1,0 +1,76 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;    
+    gap: 50px;
+    background-color: rgb(255, 255, 255);
+}
+.promotion{
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgb(66, 122, 34);
+    gap: 50px;
+    padding: 50px;
+}
+.des h3{
+    font-weight: bold;
+    color: rgb(155, 114, 28);
+}
+
+.gfcard{
+    display: grid;
+    padding: 0 200px 200px 200px;
+    grid-template-columns: 1fr 500px;
+    border: 1px solid rgb(163, 182, 86);
+
+}
+.fill{
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 30px;
+}
+ul{
+    list-style: square;
+}
+.fill input{
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(238, 238, 239);
+}
+.des button, a button{
+    border: 1px solid rgb(207, 164, 10);
+    padding: 5px;
+    border-radius: 15px;
+    width: auto;
+}
+.des button:hover, a button:hover{
+    background-color: rgb(151, 121, 11);
+    color: white;
+    transition: 0.3 ease;
+}
+
+@media (max-width: 600px) {
+    .promotion{
+        flex-direction: column;
+    }
+    .gfcard{
+        padding: 50px;
+        grid-template-columns: 1fr;
+    }
+    .fill{
+        width: auto;
+        gap: 10px
+    }
+    
+    
+}
+@media (max-width: 1250px) and (min-width: 600px) {
+    .gfcard{
+        grid-template-columns: 200px 1fr;
+    }
+    .fill{
+        width: auto;
+    }
+}

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>View Book</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+        <style>
+          body{
+            background-color:white;
+            width: auto ;
+            height:auto;
+          } 
+          .a{
+            text-decoration: none;
+            color:inherit;
+          } 
+          
+
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            background-color:#fffaf0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap; 
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #cc6600; 
+            display: flex;
+            align-items: center;
+        }
+
+    
+        .logo img{
+            width:60px;
+            height:60px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 5px 15px;
+            margin-top: 5px;
+            width:300px;
+
+        }
+        
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex-grow:1;
+        }
+
+        .search-bar .fa-search {
+            margin-left: 10px;
+            color: #888;
+        }
+
+        .main-nav {
+            order: 3;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+            margin-top: 10px;
+        }
+        
+        .main-nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+
+        .user-actions {
+            display: flex;
+            align-items: center;
+            font-size:0.9em;
+            order: 4; /* Move to the right side on narrow screens */
+        }
+
+        .user-actions a {
+            text-decoration: none;
+            color: #333;
+            margin-right: 15px;
+        }
+
+        .basket-btn {
+            background-color: #ff9900;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        
+        .basket-btn .fa-shopping-basket {
+            margin-left: 5px;
+        }
+          .top-bar{
+            display:flex;
+            background-color:  #fceed8;
+            justify-content: space-between;
+            width:100%;
+            height: 150px;
+          }
+          .main-nav-container{
+            background-color:#fffbee;
+            box-shadow:0 2px 5px rgba(55, 149, 184, 0);
+            padding:10px 70px ;
+            margin:30px auto 80px auto;
+            max-width: 800px;
+            border:2px solid #d1aa55;
+            border-radius: 10px; 
+              
+          }
+          .main-nav-list{
+            list-style:none;
+            display:flex;
+            justify-content: center;
+            flex-wrap:wrap;
+            margin:0;
+            padding:0;
+
+          }
+          .main-nav-list li{
+            margin: 0 15px;
+            display:flex;
+            align-items:center;
+          }
+          .main-nav-list a{
+            text-decoration: none;
+            color:#555;
+            font-weight:bold;
+            padding :5px 10px;
+            transition: color 0.5s;
+          }
+          .main-nav-list a:hover{
+            color:#ff9900;
+          } 
+          .nav-bordered{
+            border:2px solid #d1aa55;
+            border-radius: 5px;
+            padding:5px 15px;
+            background-color:#fff8e8;
+          }
+          .av-border:hover{
+            background-color:#ffecc6;
+          }
+          .product-page-container {
+             max-width: 900px; 
+             margin: 0 auto;
+             padding: 20px;
+             text-align: center;
+           }
+
+        .product-details {
+          padding: 30px 0;
+          }
+
+        .book-title {
+          font-size: 32px;
+          margin-bottom: 5px;
+          color: #333;
+         }
+
+        .author {
+           font-size: 20px;
+           color:#6287a4 ;
+           margin-bottom: 15px;
+         }
+
+        .rating-box{
+         direction: rtl;
+         display:inline-flex;
+         gap:5px;
+        }
+
+        .rating-box input{
+          display: none;
+        }
+.rating-box label{
+    font-size:30px;
+    color:#ccc;
+    cursor:pointer;
+    transition:color 0.2s;
+}
+.rating-box label:hover,
+.rating-box label:hover ~ label {
+  color: gold;
+}
+
+.rating-box input:checked ~ label {
+  color: gold;
+}
+.rating-score {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #000;
+}
+
+.content-wrapper {
+    display: flex;
+    text-align: left;
+    gap: 40px;
+    align-items: flex-start; 
+}
+
+.left-column {
+    flex: 0 0 200px; 
+    text-align: center;
+}
+
+.book-cover {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.add-to-cart-btn, .buy-now-btn {
+    width: 100%;
+    padding: 12px 0;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.add-to-cart-btn {
+    background-color:#f68317;
+    color:white;
+}
+
+.add-to-cart-btn:hover {
+    background-color:#d1aa55;
+}
+
+.buy-now-btn {
+    background-color: #f68317; 
+    color:white;
+    border: 1px solid #f68317;
+}
+
+.buy-now-btn:hover {
+    background-color: #d1aa55;
+}
+
+.right-column {
+    flex: 1; 
+    padding-top: 50px; 
+}
+
+.description {
+    line-height: 2.0;
+}
+
+
+.related-products {
+    margin-top: 50px;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.related-products hr {
+    margin: 40px auto;
+    width: 80%;
+    border: 0;
+    border-top: 1px solid gray;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 30px; 
+}
+
+.carousel-items {
+    display: flex;
+    overflow-x: scroll; 
+    scroll-behavior: smooth;
+    gap: 15px;
+    padding: 10px 0;
+    list-style: none;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+
+.carousel-items::-webkit-scrollbar {
+    display: none; 
+}
+
+.book-card {
+    flex: 0 0 120px; 
+    text-align: center;
+    cursor: pointer;
+}
+
+.book-card img {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-rating i {
+    color: var(--star-color);
+    font-size: 10px;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: 1px solid gray;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.prev-arrow {
+    left: 0;
+}
+
+.next-arrow {
+    right: 0;
+}
+.footer {
+            background-color: white; padding: 30px 40px; margin-top: 50px;
+            border-top: 1px solid #eee; display: flex;
+            justify-content: space-between; flex-wrap: wrap; font-size: 0.9em;
+        }
+        .footer-column h4 { font-size: 1.1em; margin-bottom: 10px; color: #cc6600; }
+        .footer-column a { display: block; margin-bottom: 5px; color: #666; }
+        .social-icons a { margin-right: 15px; font-size: 1.4em; color: #555; }
+        .app-links{
+            display:flex;
+            align-items:center;
+            gap:10px;
+            padding:10px;
+            flex-direction: column;
+
+        }
+        .app-link p{
+            margin:0;
+            font-size:1.1em;
+            text-align:center;
+        }
+        .app-badge-wrapper {
+                display: flex;
+                gap: 10px; /* Space between the two image badges */
+                align-items: center;
+            }
+        .app-links img { 
+            width: 130px; 
+            margin:0;
+            height:auto;
+        }
+        @media (max-width:768px){
+                .header{
+                    padding:10px 20px;
+                    flex-direction: column;
+                    align-items:flex-start;
+                }
+                .logo{
+                    margin-bottom:10px;
+                }
+                .search-bar{
+                    width:100%;
+                    margin-bottom:10px;
+                }
+                .user-acctions{
+                    width:100%;
+                    justify-content: space-between;
+                    margin-top: 10px;
+                    padding-top: 10px;
+                    border-top:1px solid #eee;
+                }
+                .main-nav-container{
+                    padding:10px 20px;
+                    max-width:100%;
+                    margin:10px auto 40px auto;
+
+                }
+                .main-nav-list{
+                    justify-content:space-around;
+                }
+                .info-grid{
+                    grid-template-columns :1fr;
+
+                }
+                .image-section img{
+                    max-width:80%;
+                }
+                .text-section{
+                    padding-left:0;
+                    text-align:center;
+                }
+                .text-section h3{
+                    margin-top:20px;
+                }
+                .feature-item{
+                    width:80%;
+                    margin: 0 auto;
+                }
+                .footer{
+                    flex-direction:column;
+                    padding:20px;
+                    text-align:center;
+                }
+                .fotter-column a{
+                    display:inlline-bolck;
+                    margin: 0 10px 5px 10px;
+                }
+                .app-links{
+                    justify-content:center;
+                    width:100%;
+                    flex-direction:column;
+                }
+                .app-links p{
+                    width:100%;
+                }
+                .app-links img{
+                    margin-bottom:10px;
+                }
+                .contact-info{
+                    flex-direction:column;
+                    gap:15px;
+                }
+            }
+            @media (max-width : 480px){
+                .logo{
+                    font-size:1.5em;
+                }
+                .logo img{
+                    width:40px;
+                    height:40px;
+                }
+                .user-actions{
+                    font-size:0.8em;
+                }
+                .basket-btn{
+                    padding:6px 12px;
+                }
+                .main-nav-list a{
+                    padding:5px;
+                    font-size:0..9em;
+                }
+                .about-us-container {
+            margin: 30px auto;
+            padding: 10px;
+        }
+            }
+        
+
+        
+        </style>
+    </head>
+    <body>
+        <header class="header">
+        <div class="logo">
+            <img src="image/logo.png" class="w-8">
+            Read~Zone
+        </div>
+        <div class="search-bar">
+            <input type="search" placeholder="Search Book">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="user-actions">
+            <a href="signin.html">Sign In</a>
+            <a href="basket.html"><button class="basket-btn">
+                Basket <i class="fas fa-shopping-basket"></i>
+            </button>
+            </a>
+        </div>
+        </header>
+        <div class="top-bar">
+            <nav class="main-nav-container">
+               <ul class="main-nav-list">
+                 <li><a href="home.html" >Home</a></li>
+                 <li><a href="book.html">Book</a></li>
+                 <li><a href="event.html" >Events</a></li>
+                 <li><a href="aboutus.html" >About Us</a></li>
+                 <li><a href="contact.html" >Contact</a></li>
+    </ul> 
+            </nav>
+        </div>
+    
+        <main class="product-page-container">
+    <section class="product-details">
+        <h1 class="book-title">Milk and Honey</h1>
+        <p class="author">by **Rupi Kaur**</p>
+
+         <div class="rating-box">
+        <input type="radio" name="rating" id="star5"><label for="star5"><i class="fa-solid fa-star"></i></label>
+        <input type="radio" name="rating" id="star4"><label for="star4"><i class="fa-solid fa-star"></i></label>
+        <input type="radio" name="rating" id="star3"><label for="star3"><i class="fa-solid fa-star"></i></label>
+        <input type="radio" name="rating" id="star2"><label for="star2"><i class="fa-solid fa-star"></i></label>
+        <input type="radio" name="rating" id="star1"><label for="star1"><i class="fa-solid fa-star"></i></label>
+        
+    </div>
+
+        <div class="content-wrapper">
+            <div class="left-column">
+                <img src="milk_honey.png" alt="Cover of the book Milk and Honey" class="book-cover">
+                <p class="price">$8.00</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+                <button class="buy-now-btn">Buy Now</button>
+            </div>
+
+            <div class="right-column">
+                <p class="description">
+                    The book milk and honey is a collection of poetry and prose divided into four thematic sections: "the hurting," "the loving," "the breaking," and "the healing."
+                    " The poems offer a candid and vulnerable exploration of topics like survival, abuse, violence, love, loss, and femininity.
+                    Kaur employs a minimalist style using lowercase letters and simple language, often accompanied by line art illustrations.
+                    The collection is essentially a journey charting the recovery and empowerment found after experiencing pain.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="related-products">
+        <hr>
+        <h2 class="section-title">You May Also Like</h2>
+
+        <div class="carousel-container">
+            <button class="arrow prev-arrow"><i class="fas fa-chevron-left"></i></button>
+
+            <div class="carousel-items">
+                <div class="book-card">
+                    <img src="OIP.png" alt="The Power of Now Cover">
+                    <p class="card-title">The Power of Now</p>
+                    <div class="card-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="book-card">
+                    <img src="book.jpg" alt="Home Cover">
+                    <p class="card-title">Again But Better</p>
+                    <div class="card-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="book-card">
+                    <img src="book1.jpg" alt="The Odyssey Cover">
+                    <p class="card-title">Wider Than the Sky</p>
+                    <div class="card-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <img src="book2.jpg" alt="Outliers Cover">
+                    <p class="card-title">How do you live?</p>
+                    <div class="card-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="book-card">
+                    <img src="book3.jpg" alt="The Alchemist Cover">
+                    <p class="card-title">The law of human natural</p>
+                    <div class="card-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="book-card">
+                    <img src="book4.jpg" alt="Ready Player One Cover">
+                    <p class="card-title">The phsycology of money</p>
+                    <div class="card-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="arrow next-arrow"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+        <div class="footer-column">
+            <h4>Shop With Us</h4>
+            <a href="#">My account</a>
+            <a href="#">View Basket</a>
+        </div>
+        <div class="footer-column">
+            <h4>Contact Us</h4>
+            <a href="#">Contact us</a>
+            <a href="#">Location</a>
+        </div>
+        <div class="footer-column">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="app-links">
+            <p>Trade on good with **readzone.app**</p>
+            <div class="app-badge-wrapper">
+                <img src="google-play.jpg" alt="Get it on Google Play">
+                <img src="app-store.jpg" alt="Download on the App Store">
+            </div>
+        </div>
+        <p style="width: 100%; text-align: center; margin-top: 20px; color: #999;">© Copy right 2025 - readzone.com</p>
+    </footer>
+    </body>
+</html>

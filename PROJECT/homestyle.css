@@ -1,0 +1,92 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+.headline{
+    margin: 50px;
+    margin-bottom: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(246, 230, 198);
+    align-items: end;
+    border-radius: 10px;
+    color: rgb(202, 114, 0);
+}
+.special{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    gap: 20px
+}
+.book-cv{
+    width: 300px;
+}
+.btn{
+    display: flex;
+    padding-left: 30px;
+    gap: 50px;
+}
+a button{
+    border: 1px solid rgb(207, 164, 10);
+    padding: 5px;
+    border-radius: 15px;
+    width: 100px;
+}
+a button:hover{
+    background-color: rgb(151, 121, 11);
+    color: white;
+    transition: 0.3 ease;
+}
+.sub-main{
+    display: flex;
+    flex-direction: column;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.cate{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.books{
+    display: flex;
+    gap: 50px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+    padding: 30px;
+}
+.book {
+  min-width: 200px;
+  text-align: center;
+}
+.book img {
+  width: 180px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+
+
+
+@media (max-width: 600px) {
+    .headline{
+        margin-top: 20px;
+    }
+    
+    .special{
+        flex-direction: column-reverse;
+        padding: 35px;
+        margin-top: 30px;
+    }
+    .sub-main{
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    
+}

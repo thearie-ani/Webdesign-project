@@ -1,0 +1,183 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Basket Page</title>
+  </head>
+<body class="bg-gray-50">
+
+    <nav class="w-full bg-white shadow-sm p-4 flex items-center justify-between">
+
+    <a href="home.html" class="flex items-center gap-2">
+  <img src="image/logo.png" class="w-8">
+  <span >
+    Read~Zone
+  </span>
+</a>
+
+
+    <div class="relative w-80">
+        <span class="absolute left-3 top-1/2 transform -translate-y-1/2">
+            <img src="https://img.icons8.com/ios-filled/50/search.png" class="w-4 opacity-60">
+        </span>
+
+        <input type="text" placeholder="Search Book"
+            class="w-full pl-10 pr-3 py-2 bg-gray-100 rounded-xl outline-none">
+    </div>
+
+    <div class="flex items-center gap-4">
+    <a href="signin.html" class="text-sm mr-2">Sign In</a>
+
+    <a href="basket.html" 
+        class="flex items-center gap-2 px-3 py-2 bg-gray-100 border rounded-lg hover:bg-gray-400">
+        <span class="text-sm font-medium">Basket</span>
+        <img src="image/image2.png" class="w-5">
+    </a>
+</div>
+
+
+</nav>
+    <div class="flex justify-center gap-10 text-sm py-3 bg-white">
+    <a href="index.html" class="hover:text-yellow-600">Home</a>
+    <a href="book.html" class="hover:text-yellow-600">Book</a>
+    <a href="event.html" class="hover:text-yellow-600">Events</a>
+    <a href="aboutus.html" class="hover:text-yellow-600">About Us</a>
+    <a href="contact.html" class="hover:text-yellow-600">Contact</a>
+</div>
+    <div class="max-w-3xl mx-auto mt-10 p-5">
+
+        <h2 class="text-center text-xl font-semibold mb-6">Shopping Cart</h2>
+
+        <div class="grid grid-cols-3 bg-yellow-400 p-3 rounded-md font-semibold">
+            <span>Book</span>
+            <span class="text-center">Quantity</span>
+            <span class="text-right">Price</span>
+        </div>
+
+        <div class="grid grid-cols-3 items-center border-b py-4">
+            <div class="flex gap-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwDNch5NQDwYrAOarN6xMCI2XZYrcsn8Xf9w&s" class="w-14 h-20 object-cover">
+                <div>
+                    <p class="font-semibold text-sm">The Great Gatsby</p>
+                    <p class="text-xs text-gray-500">by F. Scott Fitzgerald</p>
+                </div>
+            </div>
+
+            <div class="flex justify-center items-center gap-2">
+                <button class="px-3 py-1 border">-</button>
+                <span>1</span>
+                <button class="px-3 py-1 border">+</button>
+            </div>
+
+            <div class="text-right font-semibold">
+                $10.99  
+                <a href="#" class="ml-3 text-blue-500 text-sm">Remove</a>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 items-center border-b py-4">
+            <div class="flex gap-3">
+                <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1612238791i/56916837.jpg" class="w-14 h-20 object-cover">
+                <div>
+                    <p class="font-semibold text-sm">To Kill a Mockingbird</p>
+                    <p class="text-xs text-gray-500">by Harper Lee</p>
+                </div>
+            </div>
+
+            <div class="flex justify-center items-center gap-2">
+                <button class="px-3 py-1 border">-</button>
+                <span>2</span>
+                <button class="px-3 py-1 border">+</button>
+            </div>
+
+            <div class="text-right font-semibold">
+                $8.99  
+                <a href="#" class="ml-3 text-blue-500 text-sm">Remove</a>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 items-center border-b py-4">
+            <div class="flex gap-3">
+                <img src="https://m.media-amazon.com/images/I/61NAx5pd6XL._AC_UF1000,1000_QL80_.jpg" class="w-14 h-20 object-cover">
+                <div>
+                    <p class="font-semibold text-sm">1984</p>
+                    <p class="text-xs text-gray-500">by George Orwell</p>
+                </div>
+            </div>
+
+            <div class="flex justify-center items-center gap-2">
+                <button class="px-3 py-1 border">-</button>
+                <span>1</span>
+                <button class="px-3 py-1 border">+</button>
+            </div>
+
+            <div class="text-right font-semibold">
+                $9.99  
+                <a href="#" class="ml-3 text-blue-500 text-sm">Remove</a>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 bg-yellow-400 p-2 rounded-md font-semibold">
+           <span>Total Items: 4</span>
+           <span class="text-right">Total Price: $38.96</span>      </div>
+
+
+        <div class="flex justify-center mt-6">
+            <a href="checknow.html"><button class="bg-orange-700 text-white px-10 py-3 rounded-md hover:bg-orange-800">
+                Checkout
+            </button>
+            </a>
+        </div>
+
+    </div>
+    
+<footer class="w-full mt-20 bg-white py-12 border-t">
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-sm text-gray-700 px-6">
+
+        <div>
+            <h3 class="font-semibold mb-2">Shop With Us</h3>
+            <ul class="space-y-1">
+                <li><a href="#" class="text-blue-500 hover:underline">Buy Book</a></li>
+                <li><a href="cart.html" class="text-blue-500 hover:underline">Your Profile</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 class="font-semibold mb-2">Contact Us</h3>
+            <ul class="space-y-1">
+                <li><a href="contact.html" class="text-blue-500 hover:underline">Contact Us</a></li>
+                <li><a href="#" class="text-blue-500 hover:underline">Location</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 class="font-semibold mb-2">Follow Us</h3>
+            <div class="flex items-center gap-4 mt-2">
+                <img src="https://img.icons8.com/ios-filled/50/tiktok--v1.png" class="w-5">
+                <img src="https://img.icons8.com/ios-filled/50/facebook--v1.png" class="w-5">
+                <img src="https://img.icons8.com/ios-filled/50/instagram-new.png" class="w-5">
+                <img src="https://img.icons8.com/ios-filled/50/youtube-play.png" class="w-5">
+            </div>
+        </div>
+
+        <div>
+            <h3 class="font-semibold mb-2">Trade on good with <span class="text-blue-500">readzone-app</span></h3>
+            <div class="mt-3 flex gap-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                     class="w-28">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                     class="w-24">
+            </div>
+        </div>
+    </div>
+
+    <p class="text-center text-xs text-gray-500 mt-10">© 2025 readzone.store</p>
+</footer>
+
+</body>
+</html>
+</html>

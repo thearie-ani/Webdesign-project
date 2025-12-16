@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        
+        body{
+            background-color:white;
+            width: auto ;
+            height:auto;
+          } 
+          .a{
+            text-decoration: none;
+            color:inherit;
+          } 
+          
+
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            background-color:#fffaf0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap; 
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #cc6600; 
+            display: flex;
+            align-items: center;
+        }
+
+    
+        .logo img{
+            width:60px;
+            height:60px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 5px 15px;
+            margin-top: 5px;
+            width:300px;
+
+        }
+        
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex-grow:1;
+        }
+
+        .search-bar .fa-search {
+            margin-left: 10px;
+            color: #888;
+        }
+
+        .main-nav {
+            order: 3;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+            margin-top: 10px;
+        }
+        
+        .main-nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+
+        .user-actions {
+            display: flex;
+            align-items: center;
+            font-size:0.9em;
+            order: 4; /* Move to the right side on narrow screens */
+        }
+
+        .user-actions a {
+            text-decoration: none;
+            color: #333;
+            margin-right: 15px;
+        }
+
+        .basket-btn {
+            background-color: #ff9900;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        
+        .basket-btn .fa-shopping-basket {
+            margin-left: 5px;
+        }
+          .top-bar{
+            display:flex;
+            background-color:  #fceed8;
+            justify-content: space-between;
+            width:100%;
+            height: 150px;
+          }
+          .main-nav-container{
+            background-color:#fffbee;
+            box-shadow:0 2px 5px rgba(55, 149, 184, 0);
+            padding:10px 70px ;
+            margin:30px auto 80px auto;
+            max-width: 800px;
+            border:2px solid #d1aa55;
+            border-radius: 10px; 
+              
+          }
+          .main-nav-list{
+            list-style:none;
+            display:flex;
+            justify-content: center;
+            flex-wrap:wrap;
+            margin:0;
+            padding:0;
+
+          }
+          .main-nav-list li{
+            margin: 0 15px;
+            display:flex;
+            align-items:center;
+          }
+          .main-nav-list a{
+            text-decoration: none;
+            color:#555;
+            font-weight:bold;
+            padding :5px 10px;
+            transition: color 0.5s;
+          }
+          .main-nav-list a:hover{
+            color:#ff9900;
+          }
+
+        .about-us-container {
+            max-width: 900px; margin: 50px auto; padding: 20px; text-align: center;
+        }
+
+        .about-us-container h1 { font-size: 2.2em; margin-bottom: 10px; }
+        .about-us-container > p { margin-bottom: 40px; color: #666; }
+
+        .info-grid {
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 20px; margin-bottom: 50px; text-align: left;
+        }
+
+        .image-section {
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-section img {
+            max-width: 100%; 
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-section {
+            padding-left: 20px;
+        }
+
+        .text-section h3 {
+            font-size: 1.5em; color: #cc6600; margin-top: 0; margin-bottom: 10px;
+        }
+
+        .features-grid {
+            display: flex; justify-content: space-around;
+            text-align: center; margin-bottom: 50px;
+        }
+
+        .feature-item { width: 45%; }
+        .feature-item h3 { font-size: 1.4em; color: #cc6600; margin-bottom: 10px; }
+
+        
+        .contact-info {
+            display: flex; justify-content: center; align-items: center;
+            gap: 40px; font-size: 1.1em; flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex; align-items: center; gap: 8px; color: #555;
+        }
+
+        .contact-item .fa-phone, .contact-item .fa-envelope {
+            color: #6a5acd; 
+        }
+
+        .contact-item .fa-facebook-f { 
+            color: #3b5998;
+        }
+
+        
+        .footer {
+            background-color: white; padding: 30px 40px; margin-top: 50px;
+            border-top: 1px solid #eee; display: flex;
+            justify-content: space-between; flex-wrap: wrap; font-size: 0.9em;
+        }
+        .footer-column h4 { font-size: 1.1em; margin-bottom: 10px; color: #cc6600; }
+        .footer-column a { display: block; margin-bottom: 5px; color: #666; }
+        .social-icons a { margin-right: 15px; font-size: 1.4em; color: #555; }
+        .app-links{
+            display:flex;
+            align-items:center;
+            gap:10px;
+            padding:5px;
+            flex-direction: column;
+
+        }
+        .app-link p{
+            margin:0;
+            font-size:1.1em;
+            text-align:center;
+        }
+        .app-badge-wrapper {
+                display: flex;
+                gap:2.2em; 
+                align-items: center;
+            }
+        .app-links img { 
+            width: 130px; 
+            margin:0;
+            height:auto;
+            gap:5px;
+        }
+            @media (max-width:768px){
+                .header{
+                    padding:10px 20px;
+                    flex-direction: column;
+                    align-items:flex-start;
+                }
+                .logo{
+                    margin-bottom:10px;
+                }
+                .search-bar{
+                    width:100%;
+                    margin-bottom:10px;
+                }
+                .user-acctions{
+                    width:100%;
+                    justify-content: space-between;
+                    margin-top: 10px;
+                    padding-top: 10px;
+                    border-top:1px solid #eee;
+                }
+                .main-nav-container{
+                    padding:10px 20px;
+                    max-width:100%;
+                    margin:10px auto 40px auto;
+
+                }
+                .main-nav-list{
+                    justify-content:space-around;
+                }
+                .info-grid{
+                    grid-template-columns :1fr;
+
+                }
+                .image-section img{
+                    max-width:80%;
+                }
+                .text-section{
+                    padding-left:0;
+                    text-align:center;
+                }
+                .text-section h3{
+                    margin-top:20px;
+                }
+                .feature-item{
+                    width:80%;
+                    margin: 0 auto;
+                }
+                .footer{
+                    flex-direction:column;
+                    padding:20px;
+                    text-align:center;
+                }
+                .fotter-column a{
+                    display:inlline-bolck;
+                    margin: 0 10px 5px 10px;
+                }
+                .app-links{
+                    justify-content:center;
+                    width:100%;
+                    flex-direction:column;
+                }
+                .app-links p{
+                    width:100%;
+                }
+                .app-links img{
+                    margin-bottom:10px;
+                }
+                .contact-info{
+                    flex-direction:column;
+                    gap:15px;
+                }
+            }
+            @media (max-width : 480px){
+                .logo{
+                    font-size:1.5em;
+                }
+                .logo img{
+                    width:40px;
+                    height:40px;
+                }
+                .user-actions{
+                    font-size:0.8em;
+                }
+                .basket-btn{
+                    padding:6px 12px;
+                }
+                .main-nav-list a{
+                    padding:5px;
+                    font-size:0..9em;
+                }
+                .about-us-container {
+            margin: 30px auto;
+            padding: 10px;
+        }
+            }
+        
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="image/logo.png" alt="Read-Zone Logo">
+            <span>Read~Zone</span>
+        
+        </div>
+        <div class="search-bar">
+            <input type="search" placeholder="Search Book">
+            <i class="fas fa-search"></i>
+        </div>
+        <div class="user-actions">
+            <a href="signin.html">Sign In</a>
+            <button class="basket-btn">
+                Basket <i class="fas fa-shopping-basket"></i>
+            </button>
+        </div>
+        </header>
+        <div class="top-bar">
+            <nav class="main-nav-container">
+               <ul class="main-nav-list">
+                 <li><a href="home.html" >Home</a></li>
+                 <li><a href="book.html">Book</a></li>
+                 <li><a href="event.html" >Events</a></li>
+                 <li><a href="aboutus.html" >About Us</a></li>
+                 <li><a href="contact.html" >Contact</a></li>
+    </ul> 
+            </nav>
+        </div>
+
+    <main class="about-us-container">
+        <h1>About Our Book Shop</h1>
+        <p>Discover our journey and our mission to spread the love of reading.</p>
+        
+        <div class="info-grid">
+            <div class="image-section">
+                <img src="book5.jpg" alt="A well-stocked bookshelf">
+            </div>
+            <div class="text-section">
+                <h3 class="title-top">Who We Are</h3>
+                <p>Welcome to Read-Zone, your number one source for all kinds of books. We are committed to providing you with the best reading experience.</p>
+                
+                <h3 class="title-bottom">Our Mission</h3>
+                <p>To make reading accessible, enjoyable, and inspiring for everyone.</p>
+            </div>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <h3>Affordable Prices</h3>
+                <p>We offer competitive pricing so everyone can enjoy reading.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Fast & Secure Delivery</h3>
+                <p>We deliver your books safely and quickly to your doorstep.</p>
+            </div>
+        </div>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                +855 987 524 521
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                readzone168@gmail.com
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-facebook-f"></i>
+                Read-Zone Official
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-column">
+            <h4>Shop With Us</h4>
+            <a href="#">Buy Book</a>
+            <a href="#">Your Profile</a>
+        </div>
+        <div class="footer-column">
+            <h4>Contact Us</h4>
+            <a href="#">Contact us</a>
+            <a href="#">Location</a>
+        </div>
+        <div class="footer-column">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="app-links">
+            <p>Trade on good with **readzone.app**</p>
+            <img src="google-play.jpg" alt="Get it on Google Play">
+            <img src="app-store.jpg" alt="Download on the App Store">
+        </div>
+        <p style="width: 100%; text-align : center; margin-top: 20px; color: #999;">© Copy right 2025 - readzone.com</p>
+    </footer>
+</body>
+</html>
