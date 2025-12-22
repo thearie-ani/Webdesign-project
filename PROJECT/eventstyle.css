@@ -1,6 +1,6 @@
 .content{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     padding: 50px;    
     gap: 50px;
     background-color: rgb(255, 255, 255);
@@ -8,21 +8,20 @@
 .promotion{
     display: flex;
     justify-content: center;
-    border: 1px solid rgb(66, 122, 34);
     gap: 50px;
     padding: 50px;
 }
+
 .des h3{
+    margin-top: 50px;
     font-weight: bold;
     color: rgb(155, 114, 28);
 }
 
 .gfcard{
     display: grid;
-    padding: 0 200px 200px 200px;
-    grid-template-columns: 1fr 500px;
-    border: 1px solid rgb(163, 182, 86);
-
+    grid-template-columns: 1fr 400px;
+    padding-bottom: 150px;
 }
 .fill{
     width: 450px;
@@ -39,21 +38,24 @@ ul{
     border-radius: 5px;
     background-color: rgb(238, 238, 239);
 }
-.des button, a button{
+.btn {
     border: 1px solid rgb(207, 164, 10);
     padding: 5px;
     border-radius: 15px;
     width: auto;
 }
-.des button:hover, a button:hover{
+.btn:hover {
     background-color: rgb(151, 121, 11);
     color: white;
-    transition: 0.3 ease;
+    transition: 0.3s ease;
 }
 
 @media (max-width: 600px) {
     .promotion{
         flex-direction: column;
+    }
+    .des h3{
+        margin: 0;
     }
     .gfcard{
         padding: 50px;

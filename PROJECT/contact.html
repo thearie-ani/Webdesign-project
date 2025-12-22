@@ -1,161 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>Contact Us</title>
-</head>
+<html>
+    <head>
+        <title>Read~Zone</title>
+        <link rel="stylesheet" href="headerfooter.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-<body class="bg-[#faf7f2]">
+    </head>
+    <body>
+        <div class="main">
+            <nav class="header">
+                <div class="nav">
+                    <a class="logo" href="home.html">
+                        <img class="w-13 h-11" src="image/logo.png">
+                        <div class="self-center">Read~Zone</div>
+                    </a>
+                    <div class="search-bar">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z"></path></svg>
+                        <input class="search" type="text" placeholder="Search book">
+                    </div>
+                    <div class="right-bar">
+                        <a class="sign"  href="signin.html">Sign In</a>
+                        <a class="cart" href="basket.html"> 
+                            <div class="flex">Basket <img class="size-5" src="image/basket.png"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="menu">
+                    <input type="checkbox" id="toggle" class="toggle-menu">
 
-<header class="w-full bg-white shadow-sm">
-  <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
- 
-    <nav class="w-full bg-white shadow-sm p-4 flex items-center justify-between">
+                    <label for="toggle" class="burger">
+                    ☰
+                    </label>
+                    <div class="page">
+                        <a href="home.html">Home</a>
+                        <a href="book.html">Books</a>
+                        <a href="event.html">Events</a>
+                        <a href="aboutus.html">About Us</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="bg-white">
+            <section class="max-w-5xl mx-auto bg-white rounded-xl shadow-md p-12 m-10">
 
-    <a href="home.html" class="flex items-center gap-2">
-  <img src="image2/image3.png" class="w-8">
-  <span class="font-bold text-2xl tracking-wide text-[#4b2e2e]">
-    Read~Zone
-  </span>
-</a>
+                <h1 class="text-center text-3xl font-semibold mb-4">Contact Us</h1>
 
+                <p class="text-center text-gray-700 max-w-2xl mx-auto mb-10">
+                    Whether you have questions, need book recommendations,  
+                    want to check availability, or need help with your order—
+                    our team is here to assist you.
+                </p>
 
-    <div class="relative w-80">
-        <span class="absolute left-3 top-1/2 transform -translate-y-1/2">
-            <img src="https://img.icons8.com/ios-filled/50/search.png" class="w-4 opacity-60">
-        </span>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-        <input type="text" placeholder="Search Book"
-            class="w-full pl-10 pr-3 py-2 bg-gray-100 rounded-xl outline-none">
-    </div>
+                <form class="md:col-span-2 space-y-6">
 
-    <div class="flex items-center gap-4">
-    <a href="signin.html" class="text-sm mr-2">Sign In</a>
+                <div>
+                    <label class="font-medium">Name</label>
+                    <div class="grid grid-cols-2 gap-4 mt-2">
+                        <input type="text" placeholder="First" class="border p-2 rounded-md bg-gray-200" />
+                        <input type="text" placeholder="Last" class="border p-2 rounded-md bg-gray-200" />
+                    </div>
+                </div>
 
-    <a href="basket.html" 
-        class="flex items-center gap-2 px-3 py-2 bg-gray-100 border rounded-lg hover:bg-gray-400">
-        <span class="text-sm font-medium">Basket</span>
-        <img src="image2/image4.png" class="w-5">
-    </a>
-</div>
-    </div>
-  </div>
+                <div>
+                    <label class="font-medium">Email</label>
+                    <input 
+                        type="text" 
+                        placeholder="example@gmail.com"
+                        class="border p-2 rounded-md bg-gray-200 w-full mt-2" />
+                </div>
 
-  <div class="flex justify-center gap-10 text-sm py-3 bg-white">
-    <a href="home.html" class="hover:text-yellow-600">Home</a>
-    <a href="book.html" class="hover:text-yellow-600">Book</a>
-    <a href="event.html" class="hover:text-yellow-600">Events</a>
-    <a href="aboutus.html" class="hover:text-yellow-600">About Us</a>
-    <a href="contact.html" class="font-bold text-black">Contact</a>
-</div>
+                <div>
+                    <label class="font-medium">Phone number (optional)</label>
+                    <input 
+                        type="text" 
+                        placeholder="XXX-XXX-XXXX"
+                        class="border p-2 rounded-md bg-gray-200 w-full mt-2" />
+                </div>
 
-</header>
+                <div>
+                    <label class="font-medium">Message</label>
+                    <textarea 
+                        placeholder="Type your message...." 
+                        class="border p-2 rounded-md bg-gray-200 w-full h-28 mt-2"></textarea>
+                </div>
 
-<section class="max-w-5xl mx-auto mt-10 bg-[#f7f0e6] rounded-xl shadow-md p-12">
+                <div class="flex justify-center mt-6">
+                    <button class="bg-blue-700 text-white px-10 py-3 rounded-md hover:bg-blue-900">
+                     Submit
+                    </button>
+                </div>
 
-  <h1 class="text-center text-3xl font-semibold mb-4">Contact Us</h1>
+                </form>
 
-  <p class="text-center text-gray-700 max-w-2xl mx-auto mb-10">
-    Whether you have questions, need book recommendations,  
-    want to check availability, or need help with your order—
-    our team is here to assist you.
-  </p>
+                <div class="flex justify-center items-start">
+                    <img src="image2/image5.png" 
+                    class="w-64">
+                </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-    <form class="md:col-span-2 space-y-6">
-
-      <div>
-        <label class="font-medium">Name</label>
-        <div class="grid grid-cols-2 gap-4 mt-2">
-          <input type="text" placeholder="First" class="border p-2 rounded-md bg-gray-200" />
-          <input type="text" placeholder="Last" class="border p-2 rounded-md bg-gray-200" />
-        </div>
-      </div>
-
-      <div>
-        <label class="font-medium">Email</label>
-        <input 
-          type="text" 
-          placeholder="example@gmail.com"
-          class="border p-2 rounded-md bg-gray-200 w-full mt-2" />
-      </div>
-
-      <div>
-        <label class="font-medium">Phone number (optional)</label>
-        <input 
-          type="text" 
-          placeholder="XXX-XXX-XXXX"
-          class="border p-2 rounded-md bg-gray-200 w-full mt-2" />
-      </div>
-
-      <div>
-        <label class="font-medium">Message</label>
-        <textarea 
-          placeholder="Type your message...." 
-          class="border p-2 rounded-md bg-gray-200 w-full h-28 mt-2"></textarea>
-      </div>
-
-      <div class="flex justify-center mt-6">
-            <button class="bg-blue-700 text-white px-10 py-3 rounded-md hover:bg-blue-900">
-                Submit
-            </button>
-        </div>
-
-    </form>
-
-    <div class="flex justify-center items-start">
-      <img src="image2/image5.png" 
-        class="w-64">
-    </div>
-
-  </div>
-</section>
-
-<footer class="w-full mt-20 bg-white py-12 border-t">
-
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-sm text-gray-700 px-6">
-
-        <div>
-            <h3 class="font-semibold mb-2">Shop With Us</h3>
-            <ul class="space-y-1">
-                <li><a href="#" class="text-blue-500 hover:underline">Buy Book</a></li>
-                <li><a href="cart.html" class="text-blue-500 hover:underline">Your Profile</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <h3 class="font-semibold mb-2">Contact Us</h3>
-            <ul class="space-y-1">
-                <li><a href="contact.html" class="text-blue-500 hover:underline">contact us</a></li>
-                <li><a href="#" class="text-blue-500 hover:underline">location</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <h3 class="font-semibold mb-2">Follow Us</h3>
-            <div class="flex items-center gap-4 mt-2">
-                <img src="https://img.icons8.com/ios-filled/50/tiktok--v1.png" class="w-5">
-                <img src="https://img.icons8.com/ios-filled/50/facebook--v1.png" class="w-5">
-                <img src="https://img.icons8.com/ios-filled/50/instagram-new.png" class="w-5">
-                <img src="https://img.icons8.com/ios-filled/50/youtube-play.png" class="w-5">
+                </div>
+            </section>
             </div>
+            <footer class="footer">
+                <div class="link">
+                    <div>
+                        <h3>Shop With Us</h3>
+                        <a class="more" href="book.html">Buy Book</a><br>
+                        <a class="more" href="account.html">Your Account</a>
+                    </div>
+                    <div>
+                        <h3>Contact Us</h3>
+                        <a class="more" href="contact.html">Contact Us</a><br>
+                        <a class="more" href="https://maps.app.goo.gl/28zekhyW1sfebpnz9">Location</a>
+                    </div>
+                    <div>
+                        <h3>Follow Us</h3>
+                        <div class="flex justify-center">
+                            <a href="facebook.com"><svg width="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M15.4024 21V14.0344H17.7347L18.0838 11.3265H15.4024V9.59765C15.4024 8.81364 15.62 8.27934 16.7443 8.27934L18.1783 8.27867V5.85676C17.9302 5.82382 17.0791 5.75006 16.0888 5.75006C14.0213 5.75006 12.606 7.01198 12.606 9.32952V11.3265H10.2677V14.0344H12.606V21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H15.4024Z"></path></svg></a>
+                            <a href="tiktok.com"><svg width="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8.24537V15.5C16 19.0899 13.0899 22 9.5 22C5.91015 22 3 19.0899 3 15.5C3 11.9101 5.91015 9 9.5 9C10.0163 9 10.5185 9.06019 11 9.17393V12.3368C10.5454 12.1208 10.0368 12 9.5 12C7.567 12 6 13.567 6 15.5C6 17.433 7.567 19 9.5 19C11.433 19 13 17.433 13 15.5V2H16C16 4.76142 18.2386 7 21 7V10C19.1081 10 17.3696 9.34328 16 8.24537Z"></path></svg></a>
+                            <a href="instagram.com"><svg width="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 9C10.3436 9 9.00098 10.3431 9.00098 12C9.00098 13.6573 10.3441 15 12.001 15C13.6583 15 15.001 13.6569 15.001 12C15.001 10.3427 13.6579 9 12.001 9ZM12.001 7C14.7614 7 17.001 9.2371 17.001 12C17.001 14.7605 14.7639 17 12.001 17C9.24051 17 7.00098 14.7629 7.00098 12C7.00098 9.23953 9.23808 7 12.001 7ZM18.501 6.74915C18.501 7.43926 17.9402 7.99917 17.251 7.99917C16.5609 7.99917 16.001 7.4384 16.001 6.74915C16.001 6.0599 16.5617 5.5 17.251 5.5C17.9393 5.49913 18.501 6.0599 18.501 6.74915ZM12.001 4C9.5265 4 9.12318 4.00655 7.97227 4.0578C7.18815 4.09461 6.66253 4.20007 6.17416 4.38967C5.74016 4.55799 5.42709 4.75898 5.09352 5.09255C4.75867 5.4274 4.55804 5.73963 4.3904 6.17383C4.20036 6.66332 4.09493 7.18811 4.05878 7.97115C4.00703 9.0752 4.00098 9.46105 4.00098 12C4.00098 14.4745 4.00753 14.8778 4.05877 16.0286C4.0956 16.8124 4.2012 17.3388 4.39034 17.826C4.5591 18.2606 4.7605 18.5744 5.09246 18.9064C5.42863 19.2421 5.74179 19.4434 6.17187 19.6094C6.66619 19.8005 7.19148 19.9061 7.97212 19.9422C9.07618 19.9939 9.46203 20 12.001 20C14.4755 20 14.8788 19.9934 16.0296 19.9422C16.8117 19.9055 17.3385 19.7996 17.827 19.6106C18.2604 19.4423 18.5752 19.2402 18.9074 18.9085C19.2436 18.5718 19.4445 18.2594 19.6107 17.8283C19.8013 17.3358 19.9071 16.8098 19.9432 16.0289C19.9949 14.9248 20.001 14.5389 20.001 12C20.001 9.52552 19.9944 9.12221 19.9432 7.97137C19.9064 7.18906 19.8005 6.66149 19.6113 6.17318C19.4434 5.74038 19.2417 5.42635 18.9084 5.09255C18.573 4.75715 18.2616 4.55693 17.8271 4.38942C17.338 4.19954 16.8124 4.09396 16.0298 4.05781C14.9258 4.00605 14.5399 4 12.001 4ZM12.001 2C14.7176 2 15.0568 2.01 16.1235 2.06C17.1876 2.10917 17.9135 2.2775 18.551 2.525C19.2101 2.77917 19.7668 3.1225 20.3226 3.67833C20.8776 4.23417 21.221 4.7925 21.476 5.45C21.7226 6.08667 21.891 6.81333 21.941 7.8775C21.9885 8.94417 22.001 9.28333 22.001 12C22.001 14.7167 21.991 15.0558 21.941 16.1225C21.8918 17.1867 21.7226 17.9125 21.476 18.55C21.2218 19.2092 20.8776 19.7658 20.3226 20.3217C19.7668 20.8767 19.2076 21.22 18.551 21.475C17.9135 21.7217 17.1876 21.89 16.1235 21.94C15.0568 21.9875 14.7176 22 12.001 22C9.28431 22 8.94514 21.99 7.87848 21.94C6.81431 21.8908 6.08931 21.7217 5.45098 21.475C4.79264 21.2208 4.23514 20.8767 3.67931 20.3217C3.12348 19.7658 2.78098 19.2067 2.52598 18.55C2.27848 17.9125 2.11098 17.1867 2.06098 16.1225C2.01348 15.0558 2.00098 14.7167 2.00098 12C2.00098 9.28333 2.01098 8.94417 2.06098 7.8775C2.11014 6.8125 2.27848 6.0875 2.52598 5.45C2.78014 4.79167 3.12348 4.23417 3.67931 3.67833C4.23514 3.1225 4.79348 2.78 5.45098 2.525C6.08848 2.2775 6.81348 2.11 7.87848 2.06C8.94514 2.0125 9.28431 2 12.001 2Z"></path></svg></a>
+                            <a href="youtube.com"><svg width="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12.2439 4C12.778 4.00294 14.1143 4.01586 15.5341 4.07273L16.0375 4.09468C17.467 4.16236 18.8953 4.27798 19.6037 4.4755C20.5486 4.74095 21.2913 5.5155 21.5423 6.49732C21.942 8.05641 21.992 11.0994 21.9982 11.8358L21.9991 11.9884L21.9991 11.9991C21.9991 11.9991 21.9991 12.0028 21.9991 12.0099L21.9982 12.1625C21.992 12.8989 21.942 15.9419 21.5423 17.501C21.2878 18.4864 20.5451 19.261 19.6037 19.5228C18.8953 19.7203 17.467 19.8359 16.0375 19.9036L15.5341 19.9255C14.1143 19.9824 12.778 19.9953 12.2439 19.9983L12.0095 19.9991L11.9991 19.9991C11.9991 19.9991 11.9956 19.9991 11.9887 19.9991L11.7545 19.9983C10.6241 19.9921 5.89772 19.941 4.39451 19.5228C3.4496 19.2573 2.70692 18.4828 2.45587 17.501C2.0562 15.9419 2.00624 12.8989 2 12.1625V11.8358C2.00624 11.0994 2.0562 8.05641 2.45587 6.49732C2.7104 5.51186 3.45308 4.73732 4.39451 4.4755C5.89772 4.05723 10.6241 4.00622 11.7545 4H12.2439ZM9.99911 8.49914V15.4991L15.9991 11.9991L9.99911 8.49914Z"></path></svg></a>
+                        </div>
+                        
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div class="hfoot">Trade on good with <a class="text-blue-500 underline" href= "https://play.google.com/store/search?q=hay+day&c=apps">readzone.app</a></div>
+                        <img class="rounded-l w-25 self-center" src="image/playstore.png">
+                        <img class="rounded-l w-25 self-center" src="image/appstore.png">
+                    </div>
+                </div>
+                <hr>
+                <div class="end">© 2024-2025 || readzone.com.</div>
+            </footer>
         </div>
-
-        <div>
-            <h3 class="font-semibold mb-2">Trade on good with <span class="text-blue-500">readzone-app</span></h3>
-            <div class="mt-3 flex gap-3">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                     class="w-28">
-                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                     class="w-24">
-            </div>
-        </div>
-    </div>
-
-    <p class="text-center text-xs text-gray-500 mt-10">© 2025 readzone.store</p>
-</footer>
-</body>
+    </body>
 </html>

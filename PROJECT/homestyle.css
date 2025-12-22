@@ -49,12 +49,13 @@ a button:hover{
 .cate{
     display: flex;
     align-items: center;
+    margin-bottom: 50px;
     gap: 20px;
 }
 .books{
     display: flex;
     gap: 50px;
-    overflow-x: hidden;
+    overflow-x: scroll;
     scroll-behavior: smooth;
     width: 100%;
     padding: 30px;

@@ -64,15 +64,35 @@
                 <div class="summary">
                     <h2>Your order<hr></h2>
                     <div class="receipt">
-                        <label for="code">Apply a promo code</label><br>
-                        <input type="text" id="code">
-                        <button class="bg-yellow-500 border rounded-xl text-center w-20 h-8 text-white">Apply</button>
-                        <div class="grid grid-cols-2">
+                        <label for="code">Apply a promo code</label>
+                        <div>
+                            <input type="text" id="code">
+                            <button class="bg-yellow-500 border rounded-xl text-center w-20 h-8 text-white" id="applyBtn">Apply</button>
+                        </div>
+                        <p id="message" class="mt-2 text-sm"></p>
+                        <div class="grid grid-cols-3 gap-3">
                             <div>Product</div>
+                            <div>Quantity</div>
                             <div>Price</div>
                             <p>The great Gatsby</p>
+                            <p>1</p>
                             <p>10.99 $</p>
+                            <p>To kill a Mockingbird</p>
+                            <p>2</p>
+                            <p>17.98$</p>
+                            <p>1984</p>
+                            <p>1</p>
+                            <p>9.99$</p>
                         </div>
+                    </div>
+                    <hr>
+                    <div class="total">
+                        <div>Total</div>
+                        <div id="totalPrice">38.96$</div>
+                        <div>Discount</div>
+                        <div id="disPrice">-0.00$</div>
+                        <div>After Discount</div>
+                        <div id="afterDis">38.96$</div>
                     </div>
                 </div>
 
@@ -112,4 +132,5 @@
             </footer>
         </div>
     </body>
+    <script src="js/pro.js"></script>
 </html>
